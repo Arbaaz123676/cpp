@@ -1,28 +1,19 @@
 #include <iostream>
 using namespace std;
-// prime.cpp - check if a number is prime
-#include <bits/stdc++.h>
-using namespace std;
-
-bool isPrime(int n) {
-    if (n <= 1) return false;
-    if (n <= 3) return true;
-    if (n % 2 == 0 || n % 3 == 0) return false;
-    for (int i = 5; i * i <= n; i += 6) {
-        if (n % i == 0 || n % (i + 2) == 0) return false;
+int main(){
+    int n = 9;
+    // cout<<"enter the number = ";
+    // cin>>n;
+    int i;
+    for(i = 2; i<=n-1; i++ ){
+    if (n%i==0){
+            cout<<"the number is composite"<<endl;
+            // break;
+        } else(n%i!=0);{
+                cout<<"The number is prime"<<endl;
+                // break;
+            }
     }
-    return true;
-}
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    int n;
-    if (!(cin >> n)) return 0;
-    cout << (isPrime(n) ? "Prime" : "Not Prime") << '\n';
-    return 0;
-}
 
 
     return 0;
